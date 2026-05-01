@@ -1,0 +1,51 @@
+{
+  "name": "@dnbhq/tsconfig",
+  "version": "0.1.0",
+  "description": "Shared TypeScript configurations for DNBHQ projects.",
+  "license": "MIT",
+  "type": "module",
+  "private": false,
+  "files": [
+    "strict.json",
+    "cli.json",
+    "astro.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "tsconfig": "./strict.json",
+  "exports": {
+    "./strict": "./strict.json",
+    "./cli": "./cli.json",
+    "./astro": "./astro.json",
+    "./strict.json": "./strict.json",
+    "./cli.json": "./cli.json",
+    "./astro.json": "./astro.json"
+  },
+  "scripts": {
+    "release": "release-it",
+    "release:dry": "release-it --dry-run",
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.8",
+    "@types/node": ">=24"
+  },
+  "peerDependenciesMeta": {
+    "@types/node": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "11.0.0",
+    "@types/node": "24.0.0",
+    "release-it": "20.0.1",
+    "typescript": "6.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=25"
+  }
+}
