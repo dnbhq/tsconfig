@@ -10,7 +10,7 @@ Shared strict TypeScript configurations for DNBHQ projects.
 - [Design notes](#design-notes)
 - [Release](#release)
 - [Usage in consuming projects](#usage-in-consuming-projects)
-- [Important limitations](#important-limitations)
+- [Notes](#notes)
 
 ## Installation
 
@@ -132,23 +132,14 @@ Commit messages should follow Conventional Commits.
   }
   ```
 
-## Important limitations
+## Notes
 
-* **Use `@dnbhq/tsconfig/strict`, not `@dnbhq/tsconfig-strict`,** unless you want a separate package with that exact name. A single package with subpath configs is cleaner for `strict`, `cli`, and `astro`.
-
-* **`include`, `exclude`, and `files` are project-local.** TypeScript overwrites them from the consuming config, so the shared package should not define them. ([TypeScript][1])
-
-* **Multiple `extends` exists in TypeScript 5.0+,** but many tools still document or assume a single string. For maximum compatibility, only `astro.json` uses an array because it needs to compose Astro’s own strict config with your strict baseline. ([Microsoft for Developers][2])
-
-* **Defaults may not be obvious.** Consumers see only their local `tsconfig.json`, not the full resolved config. Use `npx tsc --showConfig` in projects when debugging inherited values.
-
-* **`types` is intentionally not in `strict.json`.** Setting `types` restricts which global `@types/*` packages are included, so Node types belong in `cli.json`, not the generic strict baseline. ([TypeScript][4])
-
-* **Astro config needs `astro` installed in the consuming project.** `astro.json` extends `astro/tsconfigs/strict`, so that path must resolve from the project using the config.
-
-* **`erasableSyntaxOnly` requires a modern TypeScript version.** Keep the peer dependency strict enough, otherwise older projects will fail on unknown compiler options.
-
-* **This package should stay boring.** It should contain JSON configs, a README, release automation, and nothing else. That keeps yearly maintenance realistic.
+* `include`, `exclude`, and `files` are project-local.TypeScript overwrites them from the consuming config, so the shared package should not define them. ([TypeScript][1])
+* Multiple `extends` are supported since TypeScript 5.0+, but many tools still document or assume a single string. For maximum compatibility, only `astro.json` uses an array because it needs to compose Astro’s own strict config with your strict baseline. ([Microsoft for Developers][2])
+* Defaults may not be obvious. Consumers see only their local `tsconfig.json`, not the full resolved config. Use `npx tsc --showConfig` in projects when debugging inherited values.
+* `types` is intentionally not in `strict.json`. Setting `types` restricts which global `@types/*` packages are included, so Node types belong in `cli.json`, not the generic strict baseline. ([TypeScript][4])
+* Astro config needs `astro` installed in the consuming project. `astro.json` extends `astro/tsconfigs/strict`, so that path must resolve from the project using the config.
+* `erasableSyntaxOnly` requires a modern TypeScript version. Keep the peer dependency strict enough, otherwise older projects will fail on unknown compiler options.
 
 [1]: https://www.typescriptlang.org/tsconfig/extends.html "TypeScript: TSConfig Option: extends"
 [2]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/?utm_source=chatgpt.com "Announcing TypeScript 5.0"
