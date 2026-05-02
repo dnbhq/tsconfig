@@ -1,7 +1,7 @@
 {
   "name": "@dnbhq/tsconfig",
   "description": "Shared TypeScript configurations for DNBHQ projects.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "license": "MIT",
   "private": false,
   "devDependencies": {

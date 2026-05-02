@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.4](https://github.com/davidsneighbour/kollitsch.dev/compare/v0.1.3...v0.1.4) (2026-05-02)
+
+### Chores
+
+* **deps:** update dependencies ([42f829e](https://github.com/davidsneighbour/kollitsch.dev/commit/42f829ed84b2783b14f2378042679a7fab96827b))
+
 ## [0.1.3](https://github.com/davidsneighbour/kollitsch.dev/compare/v0.1.2...v0.1.3) (2026-05-02)
 
 ### Chores
