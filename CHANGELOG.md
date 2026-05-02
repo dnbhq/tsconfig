@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.3](https://github.com/davidsneighbour/kollitsch.dev/compare/v0.1.2...v0.1.3) (2026-05-02)
+
+### Chores
+
+* **deps:** synch package-lock.json ([57f6eae](https://github.com/davidsneighbour/kollitsch.dev/commit/57f6eae2ea402b6f17f0f8c9a740e84977476184))
+
 ## [0.1.2](https://github.com/davidsneighbour/kollitsch.dev/compare/v0.1.1...v0.1.2) (2026-05-02)
 
 ### Build
