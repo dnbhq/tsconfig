@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.5](https://github.com/davidsneighbour/kollitsch.dev/compare/v0.1.4...v0.1.5) (2026-05-02)
+
+### Build
+
+* **fix:** add missing repository config to package.json ([97fe09b](https://github.com/davidsneighbour/kollitsch.dev/commit/97fe09b1a7cdd650bc8bfb5f381112b2df7ba1c2))
+
 ## [0.1.4](https://github.com/davidsneighbour/kollitsch.dev/compare/v0.1.3...v0.1.4) (2026-05-02)
 
 ### Chores
