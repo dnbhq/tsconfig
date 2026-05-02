@@ -1,10 +1,24 @@
 {
   "name": "@dnbhq/tsconfig",
-  "version": "0.1.3",
   "description": "Shared TypeScript configurations for DNBHQ projects.",
+  "version": "0.1.3",
   "license": "MIT",
-  "type": "module",
   "private": false,
+  "devDependencies": {
+    "@release-it/conventional-changelog": "11.0.0",
+    "@types/node": "25.6.0",
+    "release-it": "20.0.1",
+    "typescript": "6.0.3"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.8",
+    "@types/node": ">=24"
+  },
+  "scripts": {
+    "release": "release-it",
+    "release:dry": "release-it --dry-run",
+    "test": "node --test"
+  },
   "files": [
     "strict.json",
     "cli.json",
@@ -13,7 +27,13 @@
     "CHANGELOG.md",
     "LICENSE"
   ],
-  "tsconfig": "./strict.json",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=25"
+  },
   "exports": {
     "./strict": "./strict.json",
     "./cli": "./cli.json",
@@ -22,31 +42,11 @@
     "./cli.json": "./cli.json",
     "./astro.json": "./astro.json"
   },
-  "scripts": {
-    "release": "release-it",
-    "release:dry": "release-it --dry-run",
-    "test": "node --test"
-  },
-  "peerDependencies": {
-    "typescript": ">=5.8",
-    "@types/node": ">=24"
-  },
   "peerDependenciesMeta": {
     "@types/node": {
       "optional": true
     }
   },
-  "devDependencies": {
-    "@release-it/conventional-changelog": "11.0.0",
-    "@types/node": "24.0.0",
-    "release-it": "20.0.1",
-    "typescript": "6.0.3"
-  },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
-  "engines": {
-    "node": ">=25"
-  }
+  "tsconfig": "./strict.json",
+  "type": "module"
 }
