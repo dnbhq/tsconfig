@@ -18,7 +18,7 @@ const config = {
   github: {
     release: true,
     releaseName: 'v${version}',
-    tokenRef: 'GITHUB_TOKEN_CONTENT_PRIVATE',
+    tokenRef: 'GITHUB_DNBHQ_TOKEN_ADMIN_PRIVATE',
     skipChecks: true,
   },
   plugins: {
