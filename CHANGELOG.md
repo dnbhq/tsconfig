@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.2](https://github.com/davidsneighbour/kollitsch.dev/compare/v0.1.1...v0.1.2) (2026-05-02)
+
+### Build
+
+* **fix:** proper organisation token reference for release ([ec5eb79](https://github.com/davidsneighbour/kollitsch.dev/commit/ec5eb79f752895bdd6fb7fc39ec38303846c526e))
+
 ## 0.1.1 (2026-05-02)
 
 ### Chores
