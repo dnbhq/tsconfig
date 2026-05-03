@@ -1,6 +1,6 @@
 {
   "name": "@dnbhq/tsconfig",
-  "description": "Shared TypeScript configurations for DNBHQ projects.",
+  "description": "Shared TypeScript configurations for @davidsneighbour's projects.",
   "version": "0.1.5",
   "license": "MIT",
   "private": false,
